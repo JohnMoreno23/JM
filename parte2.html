@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nacionalidade</title>
+</head>
+<style>
+  body {
+    background-color: RGB(173, 216, 230);
+    font: 18pt bold arial;
+  }
+
+  #container {
+    text-align: center;
+  }
+
+  
+</style>
+
+<body>
+  <div id="container">
+    <h1>Você é estrangeiro?</h1>
+    Em qual país você nasceu? <br> <br>Digite o país:
+    <input type="text" name="txtn1" id="txtn1">
+    <input type="button" value="Verificar" onclick="verificar()">
+  </div>
+  <div id="res">
+
+  </div>
+
+  <script>
+    function verificar() {
+      var txt = document.querySelector('input#txtn1')
+      var pais = document.querySelector('div#res')
+      var paisf = txt.value
+
+      if (paisf != 'brasil' && paisf != 'Brasil') {
+        pais.innerHTML = `<p> O país digitado foi <strong> ${paisf}</strong> </p> <br> Você é estrangeiro! Saia daqui, o brasil não é pra amadores!!`
+      } else {
+        pais.innerHTML = `<p> O país digitado foi <strong> ${paisf}</strong> </p> <br> Você é Brasileiro! Aqui é BR POARRRR`
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>
